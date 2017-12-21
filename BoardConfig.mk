@@ -65,3 +65,6 @@ DEVICE_RESOLUTION := 1080x1920
 TARGET_RECOVERY_PIXEL_FORMAT := "RGBX_8888"
 TARGET_RECOVERY_FSTAB = device/xiaomi/libra/recovery.fstab
 TW_BRIGHTNESS_PATH := /sys/class/leds/lcd-backlight/brightness
+
+TWRP_INCLUDE_LOGCAT := true
+TARGET_USES_LOGD := true
