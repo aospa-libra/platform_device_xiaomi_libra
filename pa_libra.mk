@@ -12,8 +12,6 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-ifeq (pa_libra,$(TARGET_PRODUCT))
-
 # Inherit 64-bit configs
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
@@ -46,12 +44,11 @@ PRODUCT_RESTRICT_VENDOR_FILES := false
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
      PRODUCT_NAME="libra" \
-     BUILD_FINGERPRINT="Xiaomi/libra/libra:7.0/NRD90M/V8.5.1.0.NXKCNED:user/release-keys" \
-     PRIVATE_BUILD_DESC="libra-user 7.0 NRD90M V8.5.1.0.NXKCNED release-keys"
+     BUILD_FINGERPRINT="Xiaomi/libra/libra:7.0/NRD90M/V9.1.3.0.NXKCNEI:user/release-keys" \
+     PRIVATE_BUILD_DESC="libra-user 7.0 NRD90M V9.1.3.0.NXKCNEI release-keys"
 
 TARGET_OTA_ASSERT_DEVICE := libra
 PRODUCT_GMS_CLIENTID_BASE := android-xiaomi
 
 # Paranoid Android platform
 include vendor/pa/main.mk
-endif
