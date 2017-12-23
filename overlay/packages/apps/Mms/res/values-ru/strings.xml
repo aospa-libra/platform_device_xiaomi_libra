@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+/*
+ * Copyright (C) 2007-2008 Esmertec AG.
+ * Copyright (C) 2007-2008 The Android Open Source Project
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+-->
+
+<resources>
+
+    <string name="pref_title_display">Экран</string>
+
+    <!-- Settings item description for group notification setting -->
+    <string name="pref_title_group_notification">Группировка уведомлений</string>
+
+    <!-- Settings item description for group notification setting -->
+    <string name="pref_summary_group_notification">Автоматически группировать сообщения от одного получателя в единое уведомление</string>
+
+    <!-- Settings item for enable gesture -->
+    <string name="pref_title_enable_gesture">Включить жесты</string>
+
+    <!-- Settings item description for enable gesture setting -->
+    <string name="pref_summary_enable_gesture">Возможность изменять размер шрифта жестом в поле ввода</string>
+
+    <!-- Title for Default message app-->
+    <string name="pref_title_default_app">Приложение для обмена SMS</string>
+
+    <!-- Settings item for advanced settings -->
+    <string name="pref_title_advanced_settings">Дополнительные настройки</string>
+
+    <!-- Settings item for other settings -->
+    <string name="pref_title_other_settings">Другие настройки</string>
+
+    <!-- String used in MemoryStatusActivity.java -->
+    <string name="memory_status_title">Состояние памяти</string>
+    <string name="sms_phone_used">SMS:</string>
+    <string name="sms_phone_capacity">Sms Capacity:</string>
+    <string name="mms_phone_used">MMS:</string>
+    <string name="mms_phone_capacity">Mms Capacity:</string>
+    <string name="total_memory_used">Всего памяти использовано:</string>
+
+    <!-- Settings item description for SMS Validity period -->
+    <string name="pref_title_sms_validity_period">Срок действия SMS</string>
+    <string name="pref_title_sms_validity_period_slot1">Срок действия SMS для SIM1</string>
+    <string name="pref_title_sms_validity_period_slot2">Срок действия SMS для SIM2</string>
+    <string name="sms_validity_period_not_set">Не установлено</string>
+    <string name="sms_validity_period_one_hour">1 час</string>
+    <string name="sms_validity_period_six_hours">6 часов</string>
+    <string name="sms_validity_period_twelve_hours">12 часов</string>
+    <string name="sms_validity_period_one_day">1 день</string>
+    <string name="sms_validity_period_maximum">Максимум</string>
+
+    <!-- Message Template -->
+    <string name="pref_summary_message_template">Редактировать шаблоны сообщений</string>
+    <string name="pref_title_message_template">Шаблоны</string>
+    <string name="title_new_message_template">Шаблон</string>
+    <string name="summary_new_message_template">Создать новый шаблон сообщения</string>
+    <string name="message_template_title">Шаблоны</string>
+    <string name="dialog_editSMSTemplate_title">Редактировать</string>
+    <string name="dialog_createSMSTemplate_title">Новый шаблон</string>
+    <string name="message_template">Шаблон сообщения</string>
+    <string name="import_message_template">Импортировать шаблон</string>
+    <string name="delete_template_message">Удалить</string>
+    <string name="template_full">"Длина шаблона превысила допустимое значение."</string>
+
+    <string name="pref_sms_signature_title">SMS-подпись</string>
+    <string name="pref_title_enable_signature">SMS-подпись</string>
+    <string name="pref_summary_enable_signature">SMS-подпись включена</string>
+    <string name="pref_summary_disable_signature">SMS-подпись отключена</string>
+    <string name="pref_title_edit_signature">Редактировать SMS-подпись</string>
+    <string name="signature_full_toast">Подпись достигла максимальной длины.</string>
+
+</resources>
