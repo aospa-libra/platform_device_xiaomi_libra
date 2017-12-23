@@ -214,6 +214,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.ethernet.xml:system/etc/permissions/android.hardware.ethernet.xml
 
+# Off charging mode
+PRODUCT_PACKAGES += \
+    charger_res_images
+
 # Power
 PRODUCT_PACKAGES += \
     power.msm8992
