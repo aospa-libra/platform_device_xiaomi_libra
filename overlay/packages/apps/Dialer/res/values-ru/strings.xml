@@ -19,7 +19,7 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Text displayed when the call log is empty. -->
-    <string name="call_log_all_empty">В журнале пока нет звонков</string>
+    <string name="recentCalls_empty">Журнал вызовов пуст</string>
 
     <!--  for speed dial -->
     <string name="speed_dial_settings">Быстрый набор</string>
