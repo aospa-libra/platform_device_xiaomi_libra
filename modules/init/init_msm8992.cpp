@@ -26,6 +26,7 @@
  */
 
 #include <sys/sysinfo.h>
+#include <fstream>
 #define _REALLY_INCLUDE_SYS__SYSTEM_PROPERTIES_H_
 #include <sys/_system_properties.h>
 
@@ -47,6 +48,8 @@ char const *heapgrowthlimit;
 char const *heapsize;
 char const *heapminfree;
 
+uint8_t board_id;
+
 void set_memory_values()
 {
     struct sysinfo sys;
@@ -66,6 +69,25 @@ void set_memory_values()
         heapsize = "512m";
         heapminfree = "2m";
     }
+}
+
+#define BOARD_ID_PATH "/proc/device-tree/qcom,board-id"
+#define LIBRA_BOARD_ID 12
+#define AQUA_BOARD_ID 30
+
+void set_board_id()
+{
+    /*
+      qcom,board-id contains 2 4-byte numbers,
+      For libra, 00 00 00 0c and 00 00 00 00.
+      For aqua, 00 00 00 1e and 00 00 00 00.
+     */
+    std::ifstream board_id_file(BOARD_ID_PATH, std::ifstream::binary);
+    /*
+      Shift past the first 3 bytes, and only read the 4th one.
+     */
+    board_id_file.seekg(3);
+    board_id_file.read(reinterpret_cast<char *>(&board_id), 1);
 }
 
 void vendor_load_properties()
@@ -92,4 +114,23 @@ void vendor_load_properties()
     property_set("ro.hwui.text_small_cache_height", "1024");
     property_set("ro.hwui.text_large_cache_width", "2048");
     property_set("ro.hwui.text_large_cache_height", "1024");
+
+    set_board_id();
+
+    switch(board_id) {
+        case LIBRA_BOARD_ID:
+            property_override("ro.product.model", "Mi4c");
+            property_override("ro.product.device", "libra");
+            property_override("ro.build.description", "libra-user 7.0 NRD90M V9.1.3.0.NXKCNEI release-keys");
+            property_override("ro.build.fingerprint", "Xiaomi/libra/libra:7.0/NRD90M/V9.1.3.0.NXKCNEI:user/release-keys");
+            property_override("ro.build.product", "libra");
+            break;
+        case AQUA_BOARD_ID:
+            property_override("ro.product.model", "Mi4s");
+            property_override("ro.product.device", "aqua");
+            property_override("ro.build.description", "aqua-user 7.0 NRD90M V9.1.3.0.NXKCNEI release-keys");
+            property_override("ro.build.fingerprint", "Xiaomi/aqua/aqua:7.0/NRD90M/V9.1.3.0.NXKCNEI:user/release-keys");
+            property_override("ro.build.product", "aqua");
+            break;
+    }
 }
