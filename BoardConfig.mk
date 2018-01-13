@@ -165,7 +165,7 @@ TARGET_PER_MGR_ENABLED := true
 TARGET_SYSTEM_PROP += $(DEVICE_PATH)/system.prop
 
 # Recovery
-TARGET_RECOVERY_DEVICE_MODULES := libinit_libra
+TARGET_RECOVERY_DEVICE_MODULES := libinit_msm8992
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/fstab.qcom
 
 # RIL
@@ -179,7 +179,7 @@ BOARD_SEPOLICY_DIRS += $(DEVICE_PATH)/sepolicy
 BOARD_USES_QC_TIME_SERVICES := true
 
 # Vendor init
-TARGET_INIT_VENDOR_LIB := libinit_libra
+TARGET_INIT_VENDOR_LIB := libinit_msm8992
 
 # Wifi
 BOARD_HAS_QCOM_WLAN              := true
