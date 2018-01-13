@@ -131,6 +131,7 @@ void vendor_load_properties()
             property_override("ro.build.description", "aqua-user 7.0 NRD90M V9.1.3.0.NXKCNEI release-keys");
             property_override("ro.build.fingerprint", "Xiaomi/aqua/aqua:7.0/NRD90M/V9.1.3.0.NXKCNEI:user/release-keys");
             property_override("ro.build.product", "aqua");
+            property_set("ro.boot.fingerprint", "fpc");
             break;
     }
 }
