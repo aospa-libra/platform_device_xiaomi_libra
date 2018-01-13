@@ -47,7 +47,7 @@ char const *heapgrowthlimit;
 char const *heapsize;
 char const *heapminfree;
 
-void check_device()
+void set_memory_values()
 {
     struct sysinfo sys;
 
@@ -70,7 +70,7 @@ void check_device()
 
 void vendor_load_properties()
 {
-    check_device();
+    set_memory_values();
 
     // Dalvik Heap
     property_set("dalvik.vm.heapstartsize", heapstartsize);
